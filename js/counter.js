@@ -6,7 +6,6 @@ window.addEventListener('click', function (event) {
         
         counter = counterWrapper.querySelector('[data-counter]');
     }
-
     if (event.target.dataset.action === 'plus') {
         ++counter.innerText
     }
@@ -17,12 +16,11 @@ window.addEventListener('click', function (event) {
         } else if (event.target.closest('.cart-wrapper') && parseInt(counter.innerText) === 1) {
             event.target.closest('.cart-item').remove();
             toggleCartStatus();
-            calcCartPrice();
+            calcCartPriceAndDelivery();
         }
     }
-
     if (event.target.hasAttribute('data-action') && event.target.closest('.cart-wrapper')) {
-        calcCartPrice();
+        calcCartPriceAndDelivery();
     }
 })
 
