@@ -17,7 +17,7 @@ window.addEventListener('click', function(event){
         }
 
         const itemInCart = cartWrapper.querySelector(`[data-id='${productInfo.id}']`)
-        console.log(itemInCart)
+
 
         if (itemInCart){
             const counterEl = itemInCart.querySelector('[data-counter]');
@@ -55,12 +55,15 @@ window.addEventListener('click', function(event){
             </div>
             <!-- // Cart item -->`
             cartWrapper.insertAdjacentHTML('beforeend', cardItemHtml)
+
+
+
         }
         card.querySelector('[data-counter]').innerText = '1'
 
-
+        toggleCartStatus();
     
-
+        calcCartPrice()
         
     }
     

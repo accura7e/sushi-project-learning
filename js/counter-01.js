@@ -8,4 +8,5 @@ minusBtn.addEventListener('click', function(){
 }) 
 plusBtn.addEventListener('click', function(){
     ++counter.innerHTML
+    
 }) 
